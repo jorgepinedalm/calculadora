@@ -2,4 +2,13 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="saludo">Hello word</string>
+    <string name="btn_limpiar">Clear</string>
+    <string name="titulo">Calculator</string>
+    <string name="calcular">Calculate</string>
+    <string name="division">Divide</string>
+    <string name="label_numero_dos">Type number one</string>
+    <string name="label_numero_uno">Type number two</string>
+    <string name="multiplicacion">Multiply</string>
+    <string name="resta">Substract</string>
+    <string name="suma">Add</string>
 </resources>

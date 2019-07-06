@@ -32,6 +32,11 @@
         android:hint="@string/label_numero_dos"
         android:inputType="numberSigned|numberDecimal" />
 
+    <Spinner
+        android:id="@+id/cmbOperacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,7 +54,7 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Limpiar" />
+            android:text="@string/btn_limpiar" />
 
     </LinearLayout>
 
