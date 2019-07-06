@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,15 +14,27 @@ public class MainActivity extends AppCompatActivity {
     TextView resultado;
     EditText num1, num2;
     double n1, n2, suma;
+    String opciones[];
+    Spinner combo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Captura de los objetos utilizados
         setContentView(R.layout.activity_main);
         num1 = findViewById(R.id.txtNumeroUno);
         num2 = findViewById(R.id.txtNumeroDos);
         resultado = findViewById(R.id.txtResultado);
+        combo = findViewById(R.id.cmbOperacion);
 
+        //Traemos las opciones de un array de Strings
+        opciones = getResources().getStringArray(R.array.operaciones);
+
+        //Creamos el adapter indicando donde se va a colocar
+        //como se va a visualizar y que se va a mostrar
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, opciones);
+
+        combo.setAdapter(adapter);
     }
 
     public void calcular(View v){
